@@ -20,7 +20,7 @@ export class UserComponent { // we can add data that will be inputted on the scr
 
   onSelectUser() {
    // console.log('clicked!'); logs 'Clicked!' in the console when the user button is clicked on the page.
-   const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
+   const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length) // this will change the button img id when the button is clicked.
    this.selectedUser = DUMMY_USERS[randomIndex];
   }
 }
