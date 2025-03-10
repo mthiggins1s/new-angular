@@ -24,3 +24,6 @@ export class UserComponent { // we can add data that will be inputted on the scr
    this.selectedUser = DUMMY_USERS[randomIndex];
   }
 }
+
+// Notes
+  // Zone.js (zone); notifies Angular about user events, experied timers, etc.
