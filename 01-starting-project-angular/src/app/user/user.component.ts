@@ -13,4 +13,14 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length) // this will 
 })
 export class UserComponent { // we can add data that will be inputted on the screen.
   selectedUser = DUMMY_USERS[randomIndex]; // square brackets allow us to target random user id's.
+
+  get imagePath() { // this creates a 'getter'; a function within a class thats usable like a property, so it doesn't need to be called and executed explicitly.
+    return './assets/users/' + this.selectedUser.avatar // we add 'this.'; this is how you access properties within the same class. (we use this. to access the userComponent class, from which this getter belongs.)
+  }
+
+  onSelectUser() {
+   // console.log('clicked!'); logs 'Clicked!' in the console when the user button is clicked on the page.
+   const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
+   this.selectedUser = DUMMY_USERS[randomIndex];
+  }
 }

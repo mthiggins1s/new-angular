@@ -1,9 +1,11 @@
 <div>
-  <button>
+  <button (click)="onSelectUser()" > <!-- this will be called when a click event occurs. -->
     <img
-    [src]=" './assets/users/' + selectedUser.avatar"
+    [src]="imagePath"
     [alt]="selectedUser.name"
     />
     <span>{{ selectedUser.name }}</span> <!-- using string interpolation; this allows us to REFERENCE any public property in our component class. Output: we can now recieve random names from the users folder! -->
   </button>
 </div>
+
+<!-- line 4 has been replaced with 'imagePath', which can be found in the user.component.ts file -->
